@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <title>MovieWind</title>
+</head>
+
+<body class="bg-[#0f172a] text-white font-[Poppins] overflow-x-hidden p-0 m-0">
+  <nav class="top-menu">
+    <div class="bg-[#1e293b] p-2">
+      <ul class="flex justify-center md:justify-end">
+        <li class="px-2">
+          <a class="text-sm hover:text-[0.975rem]" href="#">About</a>
+        </li>
+        <li class="px-2">
+          <a class="text-sm hover:text-[0.975rem]" href="#">Contact</a>
+        </li>
+        <li class="px-2">
+          <a class="text-sm hover:text-[0.975rem]" href="#">Privacy</a>
+        </li>
+        <li class="px-2">
+          <a class="text-sm hover:text-[0.975rem]" href="#">Disclaimer</a>
+        </li>
+        <li class="px-2">
+          <a class="text-sm hover:text-[0.975rem]" href="#">DMCA</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="main-menu">
+    <div class="expand-menu bg-[#333e4d] w-full h-[60px] md:flex md:h-[70px] md:justify-between md:items-center">
+      <div class="flex justify-start">
+        <span class="text-3xl py-3 cursor-pointer text-[#b5d2ff] mx-3 md:hidden block">
+          <ion-icon name="menu-outline" onclick="Menu()"></ion-icon>
+        </span>
+        <span class="text-2xl py-3 font-extrabold text-[#b5d2ff] md:mx-8 md:text-left z-50">moviewind</span>
+      </div>
+      <form method="GET" class="mb-3 md:hidden -my-[50px] mx-3 float-right">
+        <div class="relative text-gray-600 focus-within:text-gray-400">
+          <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+            <button type="submit" class="p-1 focus:outline-none focus:shadow-outline">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                viewBox="0 0 24 24" class="w-6 h-6">
+                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </button>
+          </span>
+          <input type="search" name="q"
+            class="py-2 w-[150px] text-sm text-white bg-[#1e293b] rounded-md pl-10 focus:outline-none focus:bg-[#202940] focus:text-white"
+            placeholder="Search..." autocomplete="off" />
+        </div>
+      </form>
+      <div class="expand md:flex hidden top-[-400px]">
+        <ul class="bg-[#333e4d] duration-300 md:h-[40px] h-[10px] text-center leading-[35px] md:inline-flex md:my-3">
+          <li class="mx-3">
+            <a class="text-md hover:text-lg" href="#">Hollywood</a>
+          </li>
+          <li class="mx-3">
+            <a class="text-md hover:text-lg" href="#">Bollywood</a>
+          </li>
+          <li class="mx-3">
+            <a class="text-md hover:text-lg" href="#">Korean</a>
+          </li>
+          <li class="mx-3">
+            <a class="text-md hover:text-lg" href="#">Series</a>
+          </li>
+          <li class="mx-3">
+            <a class="text-md hover:text-lg" href="#">Others</a>
+          </li>
+          <li>
+            <form method="GET" class="mb-3 hidden md:flex">
+              <div class="relative text-gray-600 focus-within:text-gray-400">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                  <button type="submit" class="p-1 focus:outline-none focus:shadow-outline">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6">
+                      <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                  </button>
+                </span>
+                <input type="search" name="q"
+                  class="py-2 w-[200px] text-sm text-white bg-[#1e293b] rounded-md pl-10 focus:outline-none focus:bg-[#202940] focus:text-white"
+                  placeholder="Search..." autocomplete="off" />
+              </div>
+            </form>
+          </li>
+          <li class="mx-3">
+            <button type="button"
+              class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2">
+              Telegram
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="notification grid place-items-center duration-300 ">
+      <div class="flex items-center justify-center m-[20px] mx-[30px] rounded-lg bg-[#1e293b] w-[350px] h-[35px]">
+        <span class="px-3 mx-2 text-sm rounded-full text-[#1e293b] bg-[#80b1ff]">Alert</span>
+        <p>Boomark for future visit.</p>
+        <span class="close-notif cursor-pointer text-[20px] mt-[8px] ml-[20px]" onclick="Notif()">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </span>
+      </div>
+    </div>
+    <section
+      class="mx-4 mt-6 w-[380px] h-[310px] rounded-lg text-center grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 md:mx-[80px] md:mt-[50px] md:w-[650px] md:h-[310px] lg:grid-cols-4 lg:gap-6 lg:mx-[90px] lg:w-[1000px] lg:h-[310px] xl:grid-cols-5 xl:gap-6 xl:mx-[100px] xl:mt-[50px] xl:w-[1100px] xl:h-[310px] 2xl:grid-cols-6 2xl:gap-6 2xl:mx-[60px] 2xl:mt-[50px] 2xl:w-[1400px] 2xl:h-[310px] duration-300">
+      <div class="post cursor-pointer rounded-lg outline-dashed outline-[#80b1ff]">
+        <img class="rounded-lg" src="images/post1.jpg" alt="post1" />
+        <p class="mb-[20px]">
+          Avengers Endgame Full Movie Download 480p 720p 1080p
+        </p>
+        <!-- <button type="button" class=" h-[40px] w-[180px] md:w-[200px] text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 ">Download</button> -->
+      </div>
+      <div class="post cursor-pointer rounded-lg outline-dashed outline-[#80b1ff]">
+        <img class="rounded-lg" src="images/post2.jpg" alt="post2" />
+        <p>Underground Full Movie Download 480p 720p 1080p</p>
+      </div>
+      <div class="post cursor-pointer rounded-lg outline-dashed outline-[#80b1ff]">
+        <img class="rounded-lg" src="images/alll of us are dead.jpg" alt="post1" />
+        <p class="mb-[20px]">
+          All of Us Are Dead Season 1 Download 480p 720p 1080p
+        </p>
+      </div>
+      <div class="post cursor-pointer rounded-lg outline-dashed outline-[#80b1ff]">
+        <img class="rounded-lg" src="images/uncharted.jpg" alt="post2" />
+        <p>Uncharted Full Movie Download 480p 720p 1080p</p>
+      </div>
+      <div class="post cursor-pointer rounded-lg outline-dashed outline-[#80b1ff]">
+        <img class="rounded-lg" src="images/doctor-strange-2.jpg" alt="post1" />
+        <p class="mb-[20px]">
+          Doctor Strange in the Multiverse of Madness Full Movie Download 480p 720p 1080p
+        </p>
+      </div>
+      <div class="post cursor-pointer rounded-lg outline-dashed outline-[#80b1ff]">
+        <img class="rounded-lg" src="images/x-men.jpg" alt="post2" />
+        <p>X-Men Full Movie Download 480p 720p 1080p</p>
+      </div>
+      <div class="post cursor-pointer rounded-lg outline-dashed outline-[#80b1ff]">
+        <img class="rounded-lg" src="images/money-heist.jpg" alt="post1" />
+        <p class="mb-[20px]">
+          Money Heist Season 5 Download 480p 720p 1080p
+        </p>
+      </div>
+      <div class="post cursor-pointer rounded-lg outline-dashed outline-[#80b1ff]">
+        <img class="rounded-lg" src="images/ms marvel.webp" alt="post2" />
+        <p>Ms MArvel Season 1 Download 480p 720p 1080p</p>
+      </div>
+      <div class="post cursor-pointer rounded-lg outline-dashed outline-[#80b1ff]">
+        <img class="rounded-lg" src="images/red notice.jpg" alt="post1" />
+        <p class="mb-[20px]">
+          Red Notice Full Movie Download 480p 720p 1080p
+        </p>
+      </div>
+      <div class="post cursor-pointer rounded-lg outline-dashed outline-[#80b1ff]">
+        <img class="rounded-lg" src="images/sandman.webp" alt="post2" />
+        <p>Sandman Season 1 Download 480p 720p 1080p</p>
+      </div>
+      <div class="post cursor-pointer rounded-lg outline-dashed outline-[#80b1ff]">
+        <img class="rounded-lg" src="images/spiderman no way home.jpg" alt="post1" />
+        <p class="mb-[20px]">
+          Spiderman No Way Hone Full Movie Download 480p 720p 1080p
+        </p>
+      </div>
+      <div class="post cursor-pointer rounded-lg outline-dashed outline-[#80b1ff]">
+        <img class="rounded-lg" src="images/squid game.jpg" alt="post2" />
+        <p>Squid Game Season 1 Download 480p 720p 1080p</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#333e4d] w-full h-[50px] absolute top-[2550px] bottom-0 left-0 right-0 md:top-[1950px] lg:top-[1670px] xl:top-[1540px] 2xl:top-[1140px] duration-300">
+    <p class="text-center m-4 text-sm"> Copyright &copy;<script>document.write(new Date().getFullYear())</script> <span class="text-[#b5d2ff]">Moviewind</span> All Rights Reserved</p>
+    <div class="bg-[#1e293b] w-full h-[30px] -mt-2 text-center text-sm"><p class="p-1">Designed with 💜 by Ashish</p></div>
+  </footer>
+
+  <script>
+    function Menu() {
+      let expand = document.querySelector(".expand");
+      let expand_menu = document.querySelector(".expand-menu");
+      expand.classList.toggle("top-[80px]");
+      expand.classList.toggle("hidden");
+      expand.classList.toggle("block");
+      expand_menu.classList.toggle("duration-300");
+      expand_menu.classList.toggle("h-[300px]");
+    }
+    function Notif() {
+      let notif = document.querySelector(".notification");
+      notif.classList.add("hidden");
+    }
+  </script>
+</body>
+
+</html>
